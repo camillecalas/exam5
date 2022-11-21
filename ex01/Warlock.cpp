@@ -42,16 +42,44 @@ void	Warlock::learnSpell(ASpell * spell)
 		_tab.push_back(spell->clone());
 }
 
+// void	Warlock::forgetSpell(std::string spellName)
+// {
+// 	for (size_t i = 0; i < _tab.size(); i++)
+// 	{
+// 		if (_tab[i]->getName().compare(spellName) == 0){
+// 			delete _tab[i];
+
+// 			_tab.erase(_tab.begin() + i);
+// 		}
+// 	}
+// }
+
 void	Warlock::forgetSpell(std::string spellName)
 {
-	for (size_t i = 0; i < _tab.size(); i++)
+	// std::vector<ASpell *>::iterator it;
+	// it = +
+	// it = find(_tab.begin(), _tab.end(), _tab->getName().compare(spellName));
+	// if (it != _tab.end())
+	// {
+	// 		delete (*it);
+	// 			_tab.erase(it);
+	// }
+	
+	for (it = _tab.begin(); it != _tab.end(); it++)
 	{
-		if (_tab[i]->getName().compare(spellName) == 0){
-			delete _tab[i];
-			_tab.erase(_tab.begin() + i);
+		std::cout << "ICI\n";
+		if (_tab.find())
+		if ((*it)->getName().compare(spellName) == 0)
+		{
+				std::cout << "LA\n";
+				delete (*it);
+				_tab.erase(it);
+				break ;
+
 		}
 	}
 }
+
 
 void	Warlock::launchSpell(std::string spellName, ATarget const & A)
 {
